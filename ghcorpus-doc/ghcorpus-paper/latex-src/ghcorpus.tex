@@ -1,0 +1,26 @@
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+
+\usepackage[colorinlistoftodos,textsize=footnotesize,textwidth=1cm]{todonotes}
+\usepackage{graphicx} 
+
+\begin{document}
+
+\input{frontmatter}
+\input{introduction}
+\input{background}
+\input{concepts}
+\input{example}
+\input{related-work}
+
+\section{Discussion}
+\label{sec:discussion}
+\todo[inline]{Give a longer discussion of the whole paper and its impact.}
+
+\section{Conclusion}
+\todo[inline]{Give a very short conclusion for the busy reader.}
+
+% \bibliographystyle{bst}
+% \bibliography{knauss-re-landscape}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,ghcorpus}
+\end{document}

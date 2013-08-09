@@ -1,0 +1,168 @@
+% !TEX root = knauss-re-landscape.tex
+\section{Findings}
+\label{sec:findings}
+
+\begin{figure*}[t]
+\begin{center}
+\includegraphics[viewport=0 90 1100 730,clip=true,width=\textwidth]{img/overview2}
+\caption{Overview: Requirements flows in RTC.}
+\label{fig:overview}
+\end{center}
+\end{figure*}
+
+\todo[inline]{Fig. \ref{fig:overview} is a first draft but has some trouble. The challenges are hard to locate, the ecosystemness is hard to show. We might need more than one customer and more than one (IBM) project to show the real beauty...}
+
+\subsection{Stakeholders and Agents in the ecosystem}
+\todo[inline]{extract process related stuff} 
+Figure \ref{fig:overview} gives a graphical overview of sources and flows of requirements.
+All stakeholder groups have direct access to the issue tracker on jazz.net and can add requirements, for example as new bug reports or as comments to existing issues.
+Stakeholders also interact with product managers, support process, or technical leaders to report new issues. 
+These groups are part of the PMC and can add requirements to the release plan.
+The following sections discuss each stakeholder group in more detail.
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=\columnwidth]{img/sources-and-sinks}
+% \caption{Sources and sinks of requirements.}
+% \label{fig:sources-and-sinks}
+% \end{center}
+% \end{figure}
+
+\subsubsection{Stakeholder group 1 - customers}
+
+When analyzing the flow of requirements, it makes sense to start with the customers that actually buy the product and need it to optimally support their business processes. 
+Customers introduce two types of requirements into the ecosystem:
+
+\begin{itemize}
+    \item \emph{Strategic requirements, business needs, business cases:} Customers have some high level requirements and goals to make the product more suitable for their everyday life.
+    \item \emph{End-user requirements: }While using the product, the end-user on  the customer's site have specific requirements for improvement of the product.
+\end{itemize}
+
+There are different ways, these requirements are introduced to the Jazz ecosystem.
+\begin{enumerate}
+    \item \emph{Support process:} End-users call the support to receive direct help with a given topic, to file defects. 
+    In addition, the support team adds new issues (enhancements) based on their knowledge about the biggest pains of their customers.
+    \item \emph{Sales team and product manager:} The sales team has an excellent knowledge of the more strategic needs of their customers. This knowledge is communicated with the product manager\todo{check this with James' interview!}.
+    \item Customers and end-users can \emph{directly participate in discussion of requirements}. 
+    They create defects in the issue tracker and add comments to workitems that are of particular interest to them. 
+    The different jazz teams decide when to derive stories or enhancements from these defects or comments and introduce them into the it ecosystem's requirements flow.
+\end{enumerate}
+
+
+\subsubsection{Stakeholder group 2 - developers}
+
+One of the particularities of the jazz ecosystem is that the developers are also end-users of the system. Because of this double role, they introduce two different types of requirements to the ecosystem:
+\begin{itemize}
+    \item \emph{End-user requirements:} While using the product, developers have specific requirements for improvement of the product.
+    \item \emph{Technical debt:} As developers, they also know about hidden problems, i.e. ugly solutions to technical problems that will sooner or later cause problems. 
+    Technical debt can lead to embarrassing bugs. 
+    In addition, developers are unhappy when they know about too many unsolved problems in the code, because they want to create a product they can be proud about. 
+    Reports of technical debt are therefore an important source of requirements.
+\end{itemize}
+
+Again, these requirements are introduced into the general requirements flow in the jazz ecosystem via different channels.
+ On the one hand, discussions of workitems are regularly analyzed and requirement related artefacts (workitems like enhancements, defects, stories) are derived. 
+ Secondly, developers speak to the technical lead, who gains an overview where the biggest technical risks and pains of the developers lie. 
+ He can then bring them up in the central meetings and introduce workitems and general goals on a very high level when planning the next release.
+
+\subsection{Requirements related workflows}
+\subsubsection{Refinement process}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.8\columnwidth]{img/refinement}
+\caption{Basic refinement of requirements in the jazz.net ecosystem.}
+\label{fig:refinement}
+\end{center}
+\end{figure}
+
+Figure \ref{fig:refinement} shows the general refinement of requirements in the jazz ecosystem. 
+The PMC\todo{define}\ owns Plan items, which they usually create themselves to specify high level goals for the next release.
+From these Plan items, Stories are derived which are then assigned to team leads. 
+Alternatively, existing stories will be associated with a given plan item in order to embed them in the current release plan.
+A team lead will then create tasks for each Story and assign them to the developers in her team.
+
+Exceptions to this general refinement process are quite common.
+For example, stories and tasks are regularly added to the release plan without being associated with a parent plan item.
+
+\subsubsection{Release Planning}
+Figure \ref{fig:release-planning} gives an conceptual overview of the release planning.
+The PMC is responsible to plan the next release.
+Members of the PMC agree on 5 themes that will drive the next release.
+Existing and new requirements will be added to the release plan, if they fit into one of the themes and if they have a high priority.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\columnwidth]{img/release-planning}
+\caption{Release planning in the jazz ecosystem.}
+\label{fig:release-planning}
+\end{center}
+\end{figure}
+
+The PMC considers existing workitems on all levels of abstraction, but is also able to create new plan items and even stories for new requirements they are aware of.
+These new requirements can be advocated by the support team and product management or by the technical leadership. 
+Rarely, there are also requirements brought in by the sales team.
+
+\subsection{Tradeoffs and Challenges}
+In this section, we discuss the tradeoffs and associated challenges we identified in our study.
+For each tradeoff, we discuss the different forces that need to be balanced and discuss how IBM teams approach these challenges based on our information sources.
+
+\subsubsection{Openness vs. Business Needs}
+The jazz ecosystem follows an open commercial approach.
+That means that customers and end-users, in fact every stakeholder interested in the development, have access to the issue tracker and can see the current progress of the project.
+End-users can comment and submit bugs and they can see the status of their requests.
+The following \emph{forces} need to be balanced with respect to this tradeoff.
+
+\paragraph{Information flow} 
+The open commercial approach facilitates information flows between end-users, customers, developers and software managers. 
+Especially, the high level of transparency is a huge asset to deal with the high complexity of the jazz ecosystem. 
+However, it also causes some challenges that can multiply the contextual problem mentioned earlier. 
+
+\paragraph{Confidentiality} 
+If, for example, a  new report has to be created for a given customer, this will appear as a workitem in the issue tracker on jazz.net. 
+For the development, it is of course important to know the context of this report: how is it embedded in the customer's context, what exactly are the customers information needs.
+An example of an old report this customer is using, might be a big help. 
+
+However, most customers are reluctant to share such intimate knowledge of their central business processes in an openly accessible issue tracker.
+For this reason, it is not possible to have all information at one place and the openness is broken.
+In fact, it becomes impossible to understand the requirement, its solution space, and the solution chosen by the development team, without internal knowledge.
+
+\paragraph{Priorities} 
+Despite all openness, there are some economic decisions to be made.
+Often, the rationale for this decisions cannot be openly shared. 
+
+\subsubsection{Holistic approach vs. Context specificity}
+% \todo[inline]{Need to formulate this as a tradeoff. Flat hierarchy vs. Efficiency? Strict hierarchy vs. Overhead/Steep learning curve?}
+The jazz ecosystem consists of a number of products that are integrated on a service oriented platform and are meant to work together to support a customer's development and lifecycle management processes.
+The jazz platform offers a common infrastructure for these products, but third party products are often integrated via proprietary or service oriented interfaces. 
+Management of agents in this ecosystems need to balance the following \emph{forces} to align the need of a holistic approach and strategy with specific needs of their customers.
+
+\paragraph{Understanding customers} It is often difficult to understand stories and tasks, because the context of the requirements represented by these workitems is not always clear. 
+The context depends on various factors. 
+A given customer might have a unique setup, consisting of server and client platforms, type of jazz components installed, and type of other systems installed.
+Also, the development process of organizations differs and leads to different requirements for all jazz components.
+If a customer has a new requirement, it is often not obvious whether this requirement is only valid for this single customer or if this is a request for a feature with general value.
+
+This situation has quiet some impact on testers, that sometimes have trouble to create a representative testframe or to reproduce a bug reported from a pre-release.
+
+\paragraph{Learning curve}
+During our interviews we were surprised that developers did not report this problem. 
+It seems that on task level, this problem is widely solved and developers can focus on the technical aspects.
+Another factor that seems to hide this problem is that developers are also end-users.
+For this reason, developers are very knowledgable about the general domain.
+
+However, symptoms of the problem of missing context are visible even on the developer level. 
+For example, one developer stated that she is often surprised by sudden changes of priorities.
+From her domain knowledge, she could not anticipate that a certain topic would suddenly become important. 
+
+Also, there seems to be some reoccurring trouble, when the development process and culture at a customer differs from the process and culture the developers in the jazz ecosystem experience everyday.
+
+Despite these indicators, it seems that the lower and middle management tries to shield the developers from all contextual problems. 
+Especially in the technical leadership, we noticed a huge awareness of this problem, which is to large parts intertwined with some of the other challenges.
+
+\paragraph{Dependence on experience}
+From the interviews it appears that challenges caused by the tradeoff between the holistic approach and context specific requirements are mitigated by excellent lower and middle management. 
+Successful managers on this level have several years of experience of working in the Jazz ecosystem and in addition a strong network throughout the keystones of the ecosystem. 
+By this, they are able to resolve cross-cutting concerns and reassign misclassified requirements. 
+
+As an example, one developer reveals that especially in distributed development teams, the description of workitems is often not very clear. 
+In addition, it is often not possible to easily identify the person that might help with clarifying. 
+Because differences in timezones do not allow a regular synchronous communication, emails or workitem comments are used to hunt down a stakeholder that might provide clarification, which often causes a long email thread over several days without any valuable information.
+
